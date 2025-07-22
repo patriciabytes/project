@@ -1,0 +1,31 @@
+{{!< default}}
+{{!-- The tag above means: include all content of this file inside the {body} placeholder of default.hbs --}}
+
+<main class="main">
+
+    {{!-- Everything inside the #author block pulls data from the current author being viewed --}}
+    {{#author}}
+    <header class="page-header">
+
+        {{!-- Menampilkan judul halaman author dengan jumlah post yang ditulis --}}
+        {{!-- Rumus asli:
+        <h1 class="page-title">
+            {{plural ../pagination.total 
+                empty=(t "No posts by") 
+                singular=(t "% post by") 
+                plural=(t "% posts by")}} 
+            <span class="page-title-highlight">{{name}}</span>
+        </h1>
+        --}}
+        <h1 class="page-title">
+            <span class="page-title-highlight"></span>
+        </h1>
+
+    </header>
+    {{/author}}
+
+    {{!-- Menyisipkan daftar post yang ditulis author ini menggunakan partial loop.hbs --}}
+    {{!-- Rumus asli: {{> "loop"}} --}}
+    {{> ""}}
+
+</main>
